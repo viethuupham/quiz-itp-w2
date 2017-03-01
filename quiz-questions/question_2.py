@@ -29,7 +29,13 @@ def number_of_customers_per_state(customers):
     }
     """
     # Write your code here
-    pass
+    population = {}
+    for state in customers:
+        population[state]=0
+        if customers[state] != None:
+            for person in customers[state]:
+                population[state]+=1
+    return population
 
 
 class NumberOfCustomersPerStateTestCase(unittest.TestCase):
